@@ -11,10 +11,12 @@ def test_single_dropdown(page:Page):
     expect(drop_down).to_be_enabled()
 
     #page.get_by_label("Country:").click()
-    drop_down.select_option("India")#---- without label
+    #drop_down.select_option("India")#---- without label
+#below code is changed
+    drop_down.select_option(label="India") #---by label
     expect(drop_down).to_have_value("india") #validating dropdown selected value
 
-    #drop_down.select_option(label="India")---by label
+
     #drop_down.select_option("uk") ---by value
     #drop_down.select_option(index=4) ----by index
     page.wait_for_timeout(5000)
