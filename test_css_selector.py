@@ -14,8 +14,8 @@ def test_css(page:Page):
     button1=page.locator("id=male")
     button.click()
     button1.click()
-    #page.wait_for_timeout(3000)
-    #expect(button).to_be_enabled()
+    page.wait_for_timeout(3000)
+    expect(button).to_be_enabled()
 
 #check box
     checkbox=page.locator("input#sunday")
