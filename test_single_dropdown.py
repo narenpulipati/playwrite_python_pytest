@@ -4,7 +4,7 @@ def test_single_dropdown(page:Page):
     page.goto("https://testautomationpractice.blogspot.com/")
     page.wait_for_timeout(2000)
     drop_down=page.locator('#country')
-    print("\n Default selected:", drop_down.input_value())
+    #print("\n Default selected:", drop_down.input_value())
 
     #validations on dropdown
     expect(drop_down).to_be_visible()
